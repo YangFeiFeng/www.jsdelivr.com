@@ -1,0 +1,35 @@
+<link rel="ractive" href="../r-page.html">
+<link rel="ractive" href="../components/header.html" name="c-header">
+<link rel="ractive" href="../components/notification.html" name="c-notification">
+<link rel="ractive" href="../components/privacy-policy-prefetch.html" name="c-privacy-policy-prefetch">
+
+<r-page noYield="{{noYield}}" title="{{title}}" description="{{description}}">
+	<c-privacy-policy-prefetch></c-privacy-policy-prefetch>
+	<c-notification></c-notification>
+	<c-header></c-header>
+
+	<div class="p-about text-page">
+		<div class="container">
+			<h1 class="page-title">This ia a Test Page</h1>
+
+			<section>
+				<p>
+					jsDelivr is a public, open-source CDN (Content Delivery Network) developed by <a target="_blank" href="https://dakulov.com/">Dmitriy Akulov</a> and <a target="_blank" href="https://prospectone.io">Prospect One</a>,
+					focused on performance, reliability, and security. It is free to use for everyone, with no bandwidth limits.
+				</p>
+			</section>
+      
+		</div>
+	</div>
+</r-page>
+
+<script>
+	component.exports = {
+		data () {
+			return {
+				title: 'About - jsDelivr',
+				description: 'jsDelivr is a public, open-source CDN (Content Delivery Network) developed by ProspectOne, focused on performance, reliability, and security. It is free to use for everyone, with no bandwidth limits.',
+			};
+		},
+	};
+</script>
