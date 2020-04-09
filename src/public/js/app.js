@@ -1,6 +1,7 @@
 require('./polyfills');
 
 const has = require('./utils/has');
+const cTest = require('../../views/pages/test.html');
 const cAbout = require('../../views/pages/about.html');
 const cRawGit = require('../../views/pages/rawgit.html');
 const cGithub = require('../../views/pages/github.html');
@@ -67,6 +68,7 @@ Ractive.Router.prototype.dispatch = function (...args) {
 };
 
 app.router.addRoute('/', cIndex, { qs: [ 'docs', 'limit', 'page', 'query' ] });
+app.router.addRoute('/test', cTest);
 app.router.addRoute('/about', cAbout);
 app.router.addRoute('/rawgit', cRawGit);
 app.router.addRoute('/github', cGithub);
